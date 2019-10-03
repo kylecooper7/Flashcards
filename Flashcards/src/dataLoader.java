@@ -43,7 +43,7 @@ class dataLoader {
 					theAnswer = line.substring(wordList[0].length() + 1, line.length());
 				}
 				if(line.equals("")) {
-					theSet.add(new FlashCard(theQuestion, theAnswer));
+					theSet.add(new FlashCard(theQuestion, theAnswer, 0));
 				}
 				
                 
