@@ -4,10 +4,12 @@ public class QuestionAsker
 	{
 		static Scanner StringInput = new Scanner(System.in);
 		static Scanner intInput = new Scanner(System.in);
+		static int theScore = 0;
 		public static void askQuestions() {
 			for(int i = 0; i < dataLoader.theSet.size(); i++) {
 				FlashcardsDriver.listOfRandomNumbers.add(i);
 			}
+			
 			while(FlashcardsDriver.listOfRandomNumbers.size() > 0) {
 				int randomNum = (int) Math.random() * FlashcardsDriver.listOfRandomNumbers.size();
 				FlashcardsDriver.listOfRandomNumbers.remove(randomNum);
@@ -20,6 +22,9 @@ public class QuestionAsker
 				else {
 					System.out.println("Wrong! Next Question.");
 					dataLoader.theSet.get(randomNum).setScore(dataLoader.theSet.get(randomNum).getScore() - 1);
+				}
+				for(int i = 0; i < dataLoader.theSet.size() ; i++) {
+					theScore = theScore + dataLoader.theSet.get(i).getScore();
 				}
 			}
 		}

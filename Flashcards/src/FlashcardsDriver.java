@@ -27,14 +27,13 @@ public class FlashcardsDriver
 			dataLoader.LoadTheFlashcards(SetList.listOfSets.get(i).substring(theirInput.length() + 2, SetList.listOfSets.get(i).length()) );	
 		}
 	}
-	int theScore = 0;
-	for(int i = 0; i < dataLoader.theSet.size() ; i++) {
-		theScore = theScore + dataLoader.theSet.get(i).getScore();
-	}
-	System.out.println(theScore);
-while(theScore <= numberOfTimesRight * dataLoader.theSet.size()) {
+	
+	
+	
+while(QuestionAsker.theScore <= numberOfTimesRight * dataLoader.theSet.size()) {
 	QuestionAsker.askQuestions();
-	System.out.println(theScore);
+	
+	
 }
 	System.out.println("You got it");
 	
