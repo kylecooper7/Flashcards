@@ -7,7 +7,7 @@ public class FlashcardsDriver
 		static Scanner intInput = new Scanner(System.in);
 		
 		
-		static int numberOfTimesRight = 2;
+		static int numberOfTimesRight = 1;
 		static boolean cardsLeft = true;
 		static ArrayList <Integer> listOfRandomNumbers = new ArrayList <Integer>();
 		
@@ -30,12 +30,12 @@ public class FlashcardsDriver
 	
 	
 	
-while(QuestionAsker.theScore <= numberOfTimesRight * dataLoader.theSet.size()) {
+while(QuestionAsker.cardsLeft) {
 	QuestionAsker.askQuestions();
 	
 	
 }
-	System.out.println("You got it");
+	System.out.println("Congrats. You've mastered this set.");
 	
 
 	
